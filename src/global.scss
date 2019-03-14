@@ -9,3 +9,27 @@
 @import '~@ionic/angular/css/text-alignment.css';
 @import '~@ionic/angular/css/text-transformation.css';
 @import '~@ionic/angular/css/flex-utils.css';
+
+
+
+.action-sheet-option {
+    background-color: aqua;
+
+    .action-sheet-group {
+        background-color: peru;
+        
+        .action-sheet-button {
+            &.my-as-option {
+                background-color: antiquewhite;
+                border: 1px solid black;
+            }
+            &.my-as-button {
+                background-color: aquamarine;
+                border: 1px solid burlywood
+            }
+        }
+    }
+}
+
+
+
