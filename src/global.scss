@@ -11,9 +11,11 @@
 @import '~@ionic/angular/css/flex-utils.css';
 
 
-
+/**
+* This is for customize the ActionSheet UI globally.
+**/
 .action-sheet-option {
-    background-color: aqua;
+    // background-color: aqua;
 
     .action-sheet-group {
         background-color: peru;
