@@ -13,6 +13,10 @@ const routes: Routes = [
           {
             path: "",
             loadChildren: "../components/components.module#ComponentsPageModule"
+          },
+          {
+            path: "grid-layout",
+            loadChildren: "../grid-layout/grid-layout.module#GridLayoutPageModule"
           }
         ]
       },
