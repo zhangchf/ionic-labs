@@ -6,20 +6,15 @@ import { Routes, RouterModule } from '@angular/router';
 import { IonicModule } from '@ionic/angular';
 
 import { ComponentsPage } from './components.page';
+import { ComponentsRoutingModule } from './components-routing.module';
 
-const routes: Routes = [
-  {
-    path: '',
-    component: ComponentsPage
-  }
-];
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    RouterModule.forChild(routes)
+    ComponentsRoutingModule
   ],
   declarations: [ComponentsPage]
 })
