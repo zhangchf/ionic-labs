@@ -7,14 +7,24 @@ import { Routes, RouterModule } from '@angular/router';
 const routes: Routes = [
   {
     path: '',
-    component: ComponentsPage
+    component: ComponentsPage,
+    // children: [
+    //   {
+    //     path: 'grid-layout',
+    //     loadChildren: '../grid-layout/grid-layout.module#GridLayoutPageModule'
+    //   },
+    //   {
+    //     path: 'actionsheet',
+    //     loadChildren: '../actionsheet/actionsheet.module#ActionsheetPageModule'
+    //   }
+    // ]
   }
 ];
 
 
 @NgModule({
   imports: [
-    RouterModule.forChild(routes)
+    RouterModule.forChild(routes),
   ],
   exports: [
     RouterModule

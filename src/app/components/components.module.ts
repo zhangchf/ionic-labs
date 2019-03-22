@@ -1,3 +1,5 @@
+import { ActionsheetPageModule } from './../actionsheet/actionsheet.module';
+import { GridLayoutPageModule } from './../grid-layout/grid-layout.module';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';

@@ -1,50 +1,35 @@
 import { NgModule } from "@angular/core";
 import { RouterModule, Routes } from "@angular/router";
 import { HomePage } from "./home.page";
+import { ComponentsPageModule } from '../components/components.module';
+import { OthersPageModule } from '../others/others.module';
 
 const routes: Routes = [
   {
-    path: "home",
+    path: "",
     component: HomePage,
     children: [
       {
+        path: "",
+        redirectTo: "components",
+        pathMatch: "full"
+      },
+      {
         path: "components",
-        children: [
-          {
-            path: "",
-            loadChildren: "../components/components.module#ComponentsPageModule"
-          },
-          {
-            path: "grid-layout",
-            loadChildren: "../grid-layout/grid-layout.module#GridLayoutPageModule"
-          }
-        ]
+        loadChildren: "../components/components.module#ComponentsPageModule"
       },
       {
         path: "others",
-        children: [
-          {
-            path: "",
-            loadChildren: "../others/others.module#OthersPageModule"
-          }
-        ]
+        loadChildren: "../others/others.module#OthersPageModule"
       },
-      {
-        path: "",
-        redirectTo: "/home/components",
-        pathMatch: "full"
-      }
     ]
-  },
-  {
-    path: "",
-    redirectTo: "/home/components",
-    pathMatch: "full"
   }
 ];
 
 @NgModule({
-  imports: [RouterModule.forChild(routes)],
+  imports: [
+    RouterModule.forChild(routes),
+  ],
   exports: [RouterModule]
 })
 export class HomePageRoutingModule {}
